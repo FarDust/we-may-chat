@@ -11,7 +11,7 @@ import os
 
 from .models import Message
 
-sio = socketio.Server(async_mode='threading', cors_allowed_origins='*')
+sio = socketio.Server(async_mode='eventlet', cors_allowed_origins='*')
 
 @csrf_exempt
 def get_data(request):
