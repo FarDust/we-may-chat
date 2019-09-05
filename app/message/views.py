@@ -10,8 +10,8 @@ import os
 
 
 from .models import Message
-
-sio = socketio.Server(async_mode='eventlet', cors_allowed_origins='*')
+async_mode = 'threading'
+sio = socketio.Server(logger=True, async_mode=async_mode)
 
 @csrf_exempt
 def get_data(request):

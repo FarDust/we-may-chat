@@ -26,7 +26,7 @@
                     </div>
                 </div>
             </div>
-            <ngb-pagination [pageSize]="pageSize" [collectionSize]="messages.length" [(page)]="page" [maxSize]="3" [rotate]="true" [boundaryLinks]="true"></ngb-pagination>
+            <ngb-pagination [pageSize]="pageSize" [collectionSize]="messages.slice(0, 100).length" [(page)]="page" [maxSize]="3" [rotate]="true" [boundaryLinks]="true"></ngb-pagination>
         </div>
     </div>
 </div>
