@@ -13,29 +13,9 @@ from .models import Message
 
 sio = socketio.Server(async_mode='threading', cors_allowed_origins='*')
 
-# Create your views here.
-
-@csrf_exempt
-def new_message(request):
-    post_data = request.POST.copy()
-    content = post_data['content']
-    context = {
-        'status': 200,
-    }
-    data = {
-        'content': content,
-    }
-    context.update(data)
-    if request.session.get('nickname', False):
-        data['session'] = request.session
-    new_message = Message(**data)
-    new_message.save()
-    context['timestamp'] = str(new_message.timestamp.timestamp())
-    return HttpResponse(json.dumps(context), content_type="text/json")
-
 @csrf_exempt
 def get_data(request):
-    data = Message.objects.all()
+    data = Message.objects.all().order_by('-timestamp')[:100]
     if request.method == 'GET':
         serializer = MessageSerializer(data, many=True)
         return JsonResponse(serializer.data, safe=False)
@@ -47,8 +27,18 @@ def connect(sid, environ):
 
 @sio.on('chat-message')
 def my_message(sid, data):
-    sio.emit('chat-message', data)
+    data = json.loads(data)
+    if data['content'] != '':
+        context = {
+            'status': 200,
+        }
+        context.update(data)
+        new_message = Message(**data)
+        new_message.save()
+        context['timestamp'] = str(new_message.timestamp.timestamp())
+        sio.emit('chat-message', json.dumps(context))
+
 
 @sio.event
 def disconnect(sid):
-    print('disconnect ', sid)
+    print('disconnect', sid)

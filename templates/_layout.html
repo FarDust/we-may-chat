@@ -24,31 +24,9 @@
       <div class="collapse navbar-collapse" id="collapsibleNavId">
           <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
               <li class="nav-item active">
-                  <a class="nav-link" href="">Chat</a>
+                  <a class="nav-link" href="/">Chat</a>
               </li>
           </ul>
-          <ul class="navbar-nav"> 
-              {% if session.username %}
-              <li class="nav-item mt-2" style="color: #fff">
-                Hola {{ session.username }}!
-              </li>
-              &emsp;
-              <li class="nav-item" style="color: #fff">
-                <a class="nav-link" href="{% url 'logout' %}">logout</a>
-              </li>
-              {% else %}
-              <li class="nav-item" style="color: #fff"></li>
-                <a class="btn btn-success" href="">Create NickName</a>
-              </li>
-              {% endif %}
-          </ul>
-          &emsp;
-          <form class="form-inline my-2 my-lg-0">
-              <input class="form-control mr-sm-2" type="text" placeholder="Buscar...">
-              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
-                <i class="fas fa-search"></i>
-              </button>
-          </form>
       </div>
   </nav>
   {% block content %}

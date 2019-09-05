@@ -7,8 +7,4 @@ from django.contrib.sessions.models import Session
 class Message(models.Model):
     content = models.TextField()
     timestamp = models.DateTimeField(auto_now=True)
-    session = models.ForeignKey(Session,
-                                on_delete=models.SET_NULL,
-                                blank=True,
-                                null=True
-                                )
+    nickname = models.CharField(max_length=50, default='', editable=False)

@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block content %}
-<app-root><img src="/static/load.gif" alt="Loading..." style="position:fixed; top:50%; left:50%; transform: translate(-50%, -50%);"></app-root>
+<app-root retrieve_url="{% url 'data-source' %}"><img src="/static/default/load.gif" alt="Loading..." style="position:fixed; top:50%; left:50%; transform: translate(-50%, -50%);"></app-root>
 <script type="text/javascript" src="{% static 'ang/runtime.js' %}"></script>
 <script type="text/javascript" src="{% static 'ang/polyfills.js' %}"></script>
 <script type="text/javascript" src="{% static 'ang/main.js' %}"></script>

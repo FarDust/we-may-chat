@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ChatService } from '../chat.service';
 
 @Component({
@@ -9,22 +9,42 @@ import { ChatService } from '../chat.service';
 export class AppComponent {
   title = 'chat-room';
   message: string;
-  messages: string[] = [];
+  messages: object[] = [];
+  nickname: string = '';
+  page = 0;
+  pageSize = 5;
+  @Input() retrieve_url: string = '/getData/';
   
   constructor(private chatService: ChatService) {
   }
 
+  parseNickname(nickname) { 
+    if (nickname === '') {
+      return 'Anonymous';
+    };
+    return nickname;
+  }
+
   sendMessage() {
-    this.chatService.sendMessage(this.message);
+    let message = {
+      content: this.message,
+      nickname: this.nickname,
+    }
+    this.chatService.sendMessage(JSON.stringify(message));
     console.log(this.message);
     this.message = '';
   }
 
-  ngOnInit() {
+  async ngOnInit() {
+    let request = new Request(this.retrieve_url);
+    let response = await fetch(request).then((response) => {
+      return response.json();
+    }).then(data => data);
+    this.messages = response;
     this.chatService
       .getMessages()
       .subscribe((message: string) => {
-        this.messages.push(message);
+        this.messages.unshift(JSON.parse(message));
       });
   }
 }
