@@ -13,6 +13,11 @@
                 <label for="nickname">Set Nickname</label>
                 <input class='form-control' placeholder="nickname" name="nickname" [(ngModel)]="nickname" />
             </div>
+            <div class="container">
+                <p>
+                    {{ chukjoke }}
+                </p>
+            </div>
         </div>
         <div class='col-9'>
             <h4>You are chatting as {{parseNickname(nickname)}}</h4>

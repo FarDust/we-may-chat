@@ -9,6 +9,10 @@ export class ChatService {
         this.socket = io(this.url);
     }
 
+    public sendAudio(audio) {
+        this.socket.emit('audio-message', audio);
+    }
+
     public sendMessage(message) {
       this.socket.emit('chat-message', message);
     }

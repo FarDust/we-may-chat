@@ -7,15 +7,24 @@ import { ChatService } from '../chat.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  counter: number = 2;
   title = 'chat-room';
   message: string;
   messages: object[] = [];
   nickname: string = '';
+  chukjoke: string;
   page = 0;
   pageSize = 5;
   @Input() retrieve_url: string = '/getData/';
   
   constructor(private chatService: ChatService) {
+  }
+
+  getJoke() {
+    let request = new Request('https://api.chucknorris.io/jokes/random');
+    fetch(request).then((response) => {
+      return response.json();
+    }).then(data => { this.chukjoke = data.value;});
   }
 
   parseNickname(nickname) { 
@@ -33,6 +42,11 @@ export class AppComponent {
     this.chatService.sendMessage(JSON.stringify(message));
     console.log(this.message);
     this.message = '';
+    this.counter += 1;
+    if (this.counter >= 2) {
+      this.getJoke();
+      this.counter = 0;
+    }
   }
 
   async ngOnInit() {
