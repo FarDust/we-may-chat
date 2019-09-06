@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse, JsonResponse
 from django.views.decorators.csrf import csrf_exempt
+from dotenv import load_dotenv
 
 from app.message.serializers import MessageSerializer
 
@@ -8,9 +9,10 @@ import socketio
 import json
 import os
 
+load_dotenv()
 
 from .models import Message
-async_mode = 'threading'
+async_mode = os.getenv('ASYNC_MODE')
 sio = socketio.Server(logger=True, async_mode=async_mode)
 
 @csrf_exempt
