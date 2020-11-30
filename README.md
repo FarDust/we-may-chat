@@ -1,3 +1,4 @@
+[![Maintainability](https://api.codeclimate.com/v1/badges/f1a635f6ddbfbf7ea19b/maintainability)](https://codeclimate.com/github/FarDust/we-may-chat/maintainability)
 # We May Chat
 
 A simple anonymous chat
