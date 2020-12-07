@@ -1,4 +1,7 @@
-[![Maintainability](https://api.codeclimate.com/v1/badges/f1a635f6ddbfbf7ea19b/maintainability)](https://codeclimate.com/github/FarDust/we-may-chat/maintainability)
+[![Maintainability](https://api.codeclimate.com/v1/badges/f1a635f6ddbfbf7ea19b/maintainability)](https://codeclimate.com/github/FarDust/we-may-chat/maintainability) <a href="https://gitmoji.carloscuesta.me">
+  <img src="https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat-square" alt="Gitmoji">
+</a>
+
 # We May Chat
 
 A simple anonymous chat
