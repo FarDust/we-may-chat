@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "948c27b880ff66d27ff09aa4682853a72646e4e4730255102ff30894172dddd5"
+            "sha256": "ad928fda21841ca27352d854d5eac6cf9c4c6577e6d1f3406c74b86d6b38960a"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -50,11 +50,11 @@
         },
         "djangorestframework": {
             "hashes": [
-                "sha256:42979bd5441bb4d8fd69d0f385024a114c3cae7df0f110600b718751250f6929",
-                "sha256:aedb48010ebfab9651aaab1df5fd3b4848eb4182afc909852a2110c24f89a359"
+                "sha256:5cc724dc4b076463497837269107e1995b1fbc917468d1b92d188fd1af9ea789",
+                "sha256:a5967b68a04e0d97d10f4df228e30f5a2d82ba63b9d03e1759f84993b7bf1b53"
             ],
             "index": "pypi",
-            "version": "==3.10.2"
+            "version": "==3.11.2"
         },
         "dnspython": {
             "hashes": [
@@ -272,14 +272,6 @@
             ],
             "index": "pypi",
             "version": "==2.2.5"
-        },
-        "colorama": {
-            "hashes": [
-                "sha256:05eed71e2e327246ad6b38c540c4a3117230b19679b875190486ddd2d721422d",
-                "sha256:f8ac84de7840f5b9c4e3347b3c1eaa50f7e49c2b07596221daec5edaabbd7c48"
-            ],
-            "index": "pypi",
-            "version": "==0.4.1"
         },
         "entrypoints": {
             "hashes": [
