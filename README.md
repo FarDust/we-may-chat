@@ -22,4 +22,4 @@ Most of the comunication is over /socket.io/ endpoint.
 
 ## Disclaimer
 
-this app is not ment to be production ready
+this app is not meant to be production ready
