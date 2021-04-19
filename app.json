@@ -1,0 +1,23 @@
+{
+  "name": "We May Chat",
+  "description": "This app creates a anonymous chat.",
+  "keywords": [
+    "django",
+    "chat",
+    "example"
+  ],
+  "website": "https://we-may-chat.herokuapp.com",
+  "repository": "https://github.com/FarDust/we-may-chat",
+  "success_url": "/chat",
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "free"
+    }
+  },
+  "image": "heroku/python",
+  "addons": [
+    "heroku-redis",
+    "heroku-postgresql"
+  ]
+}
