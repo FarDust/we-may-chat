@@ -1,6 +1,6 @@
 {
   "name": "We May Chat",
-  "description": "This app creates a anonymous chat.",
+  "description": "This app creates an anonymous chat.",
   "keywords": [
     "django",
     "chat",
