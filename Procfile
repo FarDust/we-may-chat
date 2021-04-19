@@ -1,2 +1,2 @@
 python manage.py migrate
-web: gunicorn -k geventwebsocket.gunicorn.workers.GeventWebSocketWorker -w 1 chat.wsgi
+web: gunicorn -k eventlet -w 1 chat.wsgi
