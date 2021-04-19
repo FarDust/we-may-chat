@@ -10,9 +10,4 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.AlterField(
-            model_name='message',
-            name='timestamp',
-            field=models.DateTimeField(auto_now=True),
-        ),
     ]
