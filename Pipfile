@@ -14,7 +14,7 @@ pylint = "==2.3.1"
 [packages]
 astroid = "==2.2.5"
 colorama = "==0.4.1"
-djangorestframework = "==3.10.2"
+djangorestframework = "==3.11.2"
 django-environ = "==0.4.5"
 entrypoints = "==0.3"
 enum-compat = "==0.0.2"
