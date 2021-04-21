@@ -1,4 +1,4 @@
-import * as io from 'socket.io-client';
+import {io} from 'socket.io-client';
 import { Observable } from 'rxjs';
 import { Injectable } from "@angular/core";
 
