@@ -19,5 +19,13 @@
   "addons": [
     "heroku-redis",
     "heroku-postgresql"
+  ],
+  "buildpacks":[
+    {
+      "url": "heroku/python"
+    },
+    {
+      "url": "heroku/nodejs"
+    }
   ]
 }
