@@ -1,19 +1,20 @@
-from django.shortcuts import render
-from django.http import HttpResponse, JsonResponse
+import json
+import os
+
+import socketio
+from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from dotenv import load_dotenv
 
 from app.message.serializers import MessageSerializer
 
-import socketio
-import json
-import os
+from .models import Message
 
 load_dotenv()
 
-from .models import Message
 async_mode = os.getenv('ASYNC_MODE')
 sio = socketio.Server(logger=True, async_mode=async_mode)
+
 
 @csrf_exempt
 def get_data(request):
@@ -26,6 +27,7 @@ def get_data(request):
 @sio.event
 def connect(sid, environ):
     print('connect ', sid)
+
 
 @sio.on('chat-message')
 def my_message(sid, data):

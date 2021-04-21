@@ -259,3 +259,5 @@ testem.log
 # End of https://www.gitignore.io/api/angular
 
 staticfiles/
+static/ang/*
+!static/ang/.keep

@@ -3,7 +3,10 @@
 
 {% block content %}
 <app-root retrieve_url="{% url 'data-source' %}"><img src="/static/default/load.gif" alt="Loading..." style="position:fixed; top:50%; left:50%; transform: translate(-50%, -50%);"></app-root>
-<script type="text/javascript" src="{% static 'ang/runtime.js' %}"></script>
-<script type="text/javascript" src="{% static 'ang/polyfills.js' %}"></script>
-<script type="text/javascript" src="{% static 'ang/main.js' %}"></script>
+<script src="{% static 'ang/runtime-es2015.js' %}" type="module"></script>
+<script src="{% static 'ang/runtime-es5.js' %}" nomodule defer></script>
+<script src="{% static 'ang/polyfills-es5.js' %}" nomodule defer></script>
+<script src="{% static 'ang/polyfills-es2015.js' %}" type="module"></script>
+<script src="{% static 'ang/main-es2015.js' %}" type="module"></script>
+<script src="{% static 'ang/main-es5.js' %}" nomodule defer></script>
 {% endblock %}
