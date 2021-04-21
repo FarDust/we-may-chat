@@ -2,12 +2,12 @@
   "name": "chat-room-heroku-dummy",
   "version": "0.1.0",
   "scripts": {
-    "build": "ls"
+    "build": "ls",
+    "heroku-postbuild": "cd frontend/chat-room && export NPM_CONFIG_PRODUCTION=false && npm install && npm run build-local"
   },
   "private": true,
   "dependencies": {
   },
   "devDependencies": {
-  },
-  "postinstall": "cd frontend/chat-room && export NPM_CONFIG_PRODUCTION=false && npm install && npm run build-local"
+  }
 }
