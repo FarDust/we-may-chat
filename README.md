@@ -15,8 +15,12 @@ Most of the comunication is over /socket.io/ endpoint.
 
 ## Development instructions
 
-- (Optional) prepare virtualenv with [pipenv](https://pipenv-es.readthedocs.io/es/latest/)
-- Install dependencies: `pip install -r requirements.txt`
+- Prepare virtualenv with [pipenv](https://pipenv-es.readthedocs.io/es/latest/)
+- Install dependencies: `pipenv install`
+- Install [angular cli](https://angular.io/cli): `npm install -g @angular/cli`
+- Change directory `frontend/chat-room`
+- Run `npm install`
+- Change directory to project root
 - Run app: `python manage.py runserver`
 - Open `localhost:8000` in web browser
 
