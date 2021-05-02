@@ -1,6 +1,10 @@
-[![Maintainability](https://api.codeclimate.com/v1/badges/f1a635f6ddbfbf7ea19b/maintainability)](https://codeclimate.com/github/FarDust/we-may-chat/maintainability) <a href="https://gitmoji.carloscuesta.me">
-  <img src="https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat-square" alt="Gitmoji">
-</a>
+[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
+
+[![Maintainability](https://api.codeclimate.com/v1/badges/f1a635f6ddbfbf7ea19b/maintainability)](https://codeclimate.com/github/FarDust/we-may-chat/maintainability)
+
+[![Total alerts](https://img.shields.io/lgtm/alerts/g/FarDust/we-may-chat.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/FarDust/we-may-chat/alerts/)
+[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/FarDust/we-may-chat.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/FarDust/we-may-chat/context:javascript)
+[![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/FarDust/we-may-chat.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/FarDust/we-may-chat/context:python)
 
 # We May Chat
 
